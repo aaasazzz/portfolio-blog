@@ -1,7 +1,7 @@
 # Portfolio Blog
 
-Spring Boot로 직접 만든 포트폴리오 겸 기술 블로그입니다.
-관리자 1명이 글을 쓰고, 방문자는 글을 읽는 구조입니다.
+Spring Boot로 직접 만든 포트폴리오 겸 기술 블로그
+관리자 1명이 글을 쓰고, 방문자는 글을 읽는 구조
 
 **사이트**: https://aaasazzz-blog.duckdns.org
 
@@ -42,11 +42,11 @@ flowchart LR
     A --> M[("mysql (MySQL 8.4)")]
 ```
 
-- 세 서비스를 Docker Compose 하나로 실행합니다.
-- Caddy가 HTTPS 인증서를 자동으로 발급하고, `/api/*` 요청은 Spring으로 전달합니다.
-  프론트와 API가 같은 도메인이라 CORS 설정이 필요 없습니다.
-- MySQL과 Spring은 외부에 포트를 열지 않고 Docker 내부 네트워크로만 통신합니다.
-- DB 데이터, 업로드 이미지, HTTPS 인증서는 Docker 볼륨에 저장해 컨테이너를 다시 만들어도 유지됩니다.
+- 세 서비스를 Docker Compose 하나로 실행
+- Caddy가 HTTPS 인증서를 자동으로 발급하고, `/api/*` 요청은 Spring으로 전달
+  프론트와 API가 같은 도메인이라 CORS 설정이 필요하지 않음
+- MySQL과 Spring은 외부에 포트를 열지 않고 Docker 내부 네트워크로만 통신
+- DB 데이터, 업로드 이미지, HTTPS 인증서는 Docker 볼륨에 저장해 컨테이너를 다시 만들어도 유지
 
 ## 문서
 - [API 명세](docs/API.md): 요청·응답 형식, 에러 코드
@@ -58,7 +58,7 @@ flowchart LR
 
 ### 1. 환경변수
 
-프로젝트 루트에 `.env` 파일을 만듭니다. (`.env`는 Git에 올리지 않습니다)
+프로젝트 루트에 `.env` 파일 생성
 
 ```properties
 MYSQL_ROOT_PASSWORD=
@@ -68,7 +68,7 @@ ADMIN_LOGIN_ID=
 ADMIN_PASSWORD=
 ```
 
-관리자 계정은 첫 실행 때 `ADMIN_LOGIN_ID`, `ADMIN_PASSWORD` 값으로 만들어집니다.
+관리자 계정은 첫 실행 때 `ADMIN_LOGIN_ID`, `ADMIN_PASSWORD` 값으로 생성됨
 
 ### 2. 전체 실행 (Docker)
 
@@ -76,7 +76,7 @@ ADMIN_PASSWORD=
 docker compose up -d --build
 ```
 
-http://localhost 에 접속합니다.
+http://localhost 에 접속
 
 ### 3. 개발 모드
 
@@ -113,5 +113,5 @@ cd frontend && npm install && npm run dev   # 프론트 (localhost:5173, /api는
 ## AI 활용
 
 - 백엔드 설계와 대부분의 구현은 직접 했고, 처음 다룬 분야(세션, 이미지 업로드, Docker, CI 설정)는
-  AI가 제시한 코드를 이해한 뒤 사용했습니다. 프론트 화면은 AI로 생성했습니다.
-  단계별 내용은 [개발 기록의 AI 활용](docs/dev_log.md#15-ai-활용)에 있습니다.
+  AI가 제시한 코드를 이해한 뒤 사용. 프론트 화면은 AI로 생성
+  단계별 내용은 [개발 기록의 AI 활용](docs/dev_log.md#15-ai-활용)
