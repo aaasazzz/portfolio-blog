@@ -114,4 +114,4 @@ cd frontend && npm install && npm run dev   # 프론트 (localhost:5173, /api는
 
 - 백엔드 설계와 대부분의 구현은 직접 했고, 처음 다룬 분야(세션, 이미지 업로드, Docker, CI 설정)는
   AI가 제시한 코드를 이해한 뒤 사용. 프론트 화면은 AI로 생성
-  단계별 내용은 [개발 기록의 AI 활용](docs/dev_log.md#15-ai-활용)
+  단계별 내용은 [개발 기록의 AI 활용](docs/dev_log.md#16-ai-활용)
