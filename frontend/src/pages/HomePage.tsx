@@ -7,18 +7,20 @@ import { useAsync } from '../lib/useAsync';
 export default function HomePage() {
   return (
     <>
-      <section className="hero container">
-        <div className="accent-bar" />
-        <h1>
-          안녕하세요,
-          <br />
-          <em>{profile.headline}</em>입니다
-        </h1>
-        <p className="hero-tagline">{profile.tagline}</p>
-        <Link className="button button-primary" to="/#project">
-          프로젝트 보기
-        </Link>
-      </section>
+      <div className="hero-backdrop">
+        <section className="hero container">
+          <div className="accent-bar" />
+          <h1>
+            안녕하세요,
+            <br />
+            <em>{profile.headline}</em>입니다
+          </h1>
+          <p className="hero-tagline">{profile.tagline}</p>
+          <Link className="button button-primary" to="/#project">
+            프로젝트 보기
+          </Link>
+        </section>
+      </div>
 
       <section className="section container" id="tech-stack">
         <h2>Tech stack</h2>

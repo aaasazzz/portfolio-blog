@@ -7,8 +7,8 @@ export const profile = {
 export const techStack = [
   { group: 'Backend', items: ['Java', 'Spring Boot', 'JPA'] },
   { group: 'Database', items: ['MySQL'] },
-  { group: 'Infra', items: ['Docker', 'AWS EC2', 'Caddy', 'GitHub Actions'] },
-  { group: 'Language', items: ['C++', 'Python'] },
+  { group: 'Infra', items: ['Docker', 'AWS EC2', 'GitHub Actions'] },
+  { group: 'Language', items: ['C++', 'Python', 'Java'] },
 ];
 
 export const careers = [
